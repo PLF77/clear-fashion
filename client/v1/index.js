@@ -46,6 +46,7 @@ function findCheapestTShirt(market) {
     return cheapTshirt;
 }
 let cheapestTShirt = findCheapestTShirt(marketplace);
+console.log('Cheapest t-shirt :');
 console.log(cheapestTShirt);
 
 /**
@@ -62,6 +63,8 @@ console.log(cheapestTShirt);
 // 2. Log the variable
 
 let nbProducts = marketplace.length;
+console.log('Number of products: ');
+
 console.log(nbProducts);
 
 
@@ -71,6 +74,8 @@ console.log(nbProducts);
 // 3. Log how many brands we have
 
 let allBrands = [... new Set(marketplace.map(item => item.brand))];
+console.log('Brand names:');
+
 console.log(allBrands);
 
 // 🎯 TODO: Sort by price
@@ -94,6 +99,7 @@ function sortByPriceASC(data) {
     }
 }
 let sortedMarketplace = sortByPriceASC(marketplace);
+console.log('Sorted markedplace :');
 console.log(sortedMarketplace);
 // 🎯 TODO: Sort by date
 // 1. Create a function to sort the marketplace objects by products date
@@ -104,20 +110,28 @@ function sortByDate(data) {
     let sortedData = data.sort((a, b) => new Date(a.date) - new Date(b.date));
     return sortedData;
 }
+console.log('Sort by date :');
+
 console.log(sortByDate(marketplace));
 
 // 🎯 TODO: Filter a specific price range
 // 1. Filter the list of products between 50€ and 100€
 // 2. Log the list
 
-let productsBetween50And100 = marketplace.filter(item => (item.price <= 100 && item.price>=50));
+let productsBetween50And100 = marketplace.filter(item => (item.price <= 100 && item.price >= 50));
+console.log('Filter products between 50 and 100:');
+
 console.log(productsBetween50And100);
 
 // 🎯 TODO: Average price
 // 1. Determine the average price of the marketplace
 // 2. Log the average
 let avgPriceOfMarketplace = marketplace.map(item => item.price).reduce((sum, value) => sum+value)/marketplace.length;
+console.log('Average price of marketplace :');
+
 console.log(avgPriceOfMarketplace);
+
+
 
 /**
  * 🏎
@@ -154,6 +168,8 @@ let nbOfProductsByBrand = []
 for (let brand in brands) {
     nbOfProductsByBrand.push({ brand: brands[brand].length })
 };
+console.log('Number of products by brand :');
+
 console.log(nbOfProductsByBrand);
 
 // 🎯 TODO: Sort by price for each brand
@@ -163,6 +179,8 @@ console.log(nbOfProductsByBrand);
 for (let brand in brands) {
     brands[brand].sort((a, b) => b.price - a.price);
 }
+console.log('Sort brands by price:');
+
 console.log(brands)
 
 // 🎯 TODO: Sort by date for each brand
@@ -172,6 +190,8 @@ console.log(brands)
 for (let brand in brands) {
     brands[brand].sort((a, b) => new Date(a.date) - new Date(b.date));
 }
+console.log('Sort brands product by date :');
+
 console.log(brands)
 
 
@@ -192,6 +212,8 @@ for (let brand in brands) {
     let p90value = sorted[Math.ceil(brand.length / 10)].price;
     p90valueByBrand[brand] = p90value;
 }
+console.log('P90 value :');
+
 console.log(p90valueByBrand);
 
 /**
@@ -276,6 +298,8 @@ for (let product of COTELE_PARIS) {
         break;
     }
 }
+console.log('New relead products:');
+
 console.log(`New products at COTELE PARIS: ${newProducts}`);
 
 
@@ -298,6 +322,8 @@ console.log(`COTELE is a reasonable shop:${reasonableShop}`);
 function findById(id) {
     return COTELE_PARIS.find(item => item.uuid === id);
 }
+console.log('find by id:');
+
 console.log(findById('b56c6d88-749a-5b4c-b571-e5b5c6483131'));
 // 🎯 TODO: Delete a specific product
 // 1. Delete the product with the uuid `b56c6d88-749a-5b4c-b571-e5b5c6483131`
@@ -307,6 +333,8 @@ function deleteByID(id) {
     let productToDeleteIndex = COTELE_PARIS.findIndex(item => item.uuid === id);
     COTELE_PARIS.splice(productToDeleteIndex, 1);
 }
+console.log('Delete by id:');
+
 deleteByID('b56c6d88-749a-5b4c-b571-e5b5c6483131');
 console.log(COTELE_PARIS);
 
