@@ -2,21 +2,21 @@
 'use strict';
 
 const marketplace = [
-  {
-    'brand': 'adresse',
-    'link':
-      'https://adresse.paris/vestes/4256-sorbonne-laine-laminee-1300000263740.html#/79-taille_fastmag-m',
-    'price': 299,
-    'name': 'Sorbonne Laine laminée Caramel',
-    'date': '2020-09-23'
-  },
-  {
-    'brand': 'loom',
-    'link':
-      'https://www.loom.fr/collections/tous-les-vetements/products/le-t-shirt',
-    'price': 20,
-    'name': 'Le t-shirt',
-    'date': '2020-06-16'
+    {
+        'brand': 'adresse',
+        'link':
+            'https://adresse.paris/vestes/4256-sorbonne-laine-laminee-1300000263740.html#/79-taille_fastmag-m',
+        'price': 299,
+        'name': 'Sorbonne Laine laminée Caramel',
+        'date': '2020-09-23'
+    },
+    {
+        'brand': 'loom',
+        'link':
+            'https://www.loom.fr/collections/tous-les-vetements/products/le-t-shirt',
+        'price': 20,
+        'name': 'Le t-shirt',
+        'date': '2020-06-16'
   },
   {
     'brand': 'adresse',
